@@ -120,11 +120,22 @@ namespace TextToSpeech
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            int savedX = Properties.Settings.Default.FormLocationX;
+            int savedY = Properties.Settings.Default.FormLocationY;
+
+            if (savedX >= 0 && savedY >= 0) {
+                this.Location = new Point(savedX, savedY);
+            }
+
             restoreState();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.FormLocationX = this.Location.X;
+            Properties.Settings.Default.FormLocationY = this.Location.Y;
+            Properties.Settings.Default.Save();
+
             Application.Exit(); 
         }
 

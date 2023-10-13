@@ -118,5 +118,29 @@ namespace TextToSpeech.Properties {
                 this["win"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int FormLocationX {
+            get {
+                return ((int)(this["FormLocationX"]));
+            }
+            set {
+                this["FormLocationX"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("100")]
+        public int FormLocationY {
+            get {
+                return ((int)(this["FormLocationY"]));
+            }
+            set {
+                this["FormLocationY"] = value;
+            }
+        }
     }
 }
